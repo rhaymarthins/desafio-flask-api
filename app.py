@@ -1,7 +1,9 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import sqlite3
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Inicialização do banco de dados (cria a tabela se não existir)
 def init_db():
