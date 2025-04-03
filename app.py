@@ -22,7 +22,8 @@ init_db()
 # Rota inicial com mensagem de boas vindas
 @app.route('/')
 def homepage():
-    return '<h2>Bem-vindos a API de livros feita em Flask!</h2>'
+    # Renderiza o template HTML chamado 'index.html'.
+    return render_template('index.html')
 
 # Rota para cadastrar novos livros
 @app.route('/doar', methods=['POST'])
